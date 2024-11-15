@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After class project</title>
+</head>
+<body>
+    <h2>JS class, Class inhertance and Static Methods</h2>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <script>
+        class student {
+                constructor(name, year) {
+                    this.name = name;
+                    this.year = year;
+                }
+            
+                show() {
+                    var date = new Date();
+                        return "My name is " + this.name + " and age is " + (date.getFullYear() - this.year);
+                    }
+                    static hi(){
+                        return "hi";
+                    }
+                }
+
+        class study {
+                        constructor(school) {
+                            this.schoolname = schoolname;
+                        }
+                        present() {
+                            return "My school name is " + this.schooname;
+                        }
+                    }
+        class grade extends study {
+                        constructor(school, grade) {
+                            super(school);
+                            this.grade = grade;
+                        }
+                        show() {
+                            return this.present() + " and I studies in " + this.class;
+                        }
+                    }
+        
+            st1 = new student("Kushagraa Jain", 2011);
+            document.getElementById("p1").innerHTML = st1.show();
+            document.getElementById("p2").innerHTML = st1.name + " was born in " + st1.year;
+            stu1 = new grade("St. Josephs Convent Se. Sec.School", "8th grade")
+            document.getElementById("p3").innerHTML = stu1.show();  
+            document.getElementById("p4").innerHTML = student.hi();  
+    </script>
+</body>
+</html>
